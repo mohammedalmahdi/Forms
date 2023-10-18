@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html post="">
+    <head>
+        <title>Hospital Form</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Boss Hospital Form">
+    </head>
+    <body>
+        <form>
+                <label>Hospital Name :</label>
+                    <input type="text" id="Hname" value="Boss Hospital" name="Hospital Name"  required readonly>
+            <br>
+            <br>
+                <label>First Name :</label>
+                    <input type="text" id="first name" placeholder="First name" name="first name"  maxlength="20" required autofocus>
+            <br>
+            <br>
+                <label>Last Name :</label>
+                    <input type="text" id="Last name" placeholder="last name" name="last name" maxlength="30" size="30" pattern="{30}" required>
+            <br>
+            <br>
+                <lable>Email :</lable>
+                    <input type="email" name="Email" id="email" placeholder="Email:e.x. Ali@gmail.com" autocomplete="on" required>
+            <br>
+            <br>
+                <label>phone :</label>
+                    <input type="tel" id="phone" name="phone number" placeholder="77 (only): 776-543-210" pattern="77[0-9]{7}" maxlength="9" required>
+            <br>
+            <br>
+                <label>Password :</label>
+                    <input type="password" id="password" name="password" placeholder="8 letters only" maxlength="8" pattern="[a-zA-Z]{8}" title="your password should consist of 8 characters (don't use numbers or symbols)" required>
+            <br>
+            <br>
+                <label>github link:</label>
+                    <input type="url" name="github link" placeholder="github link" required>
+            <br>
+            <br>
+                <label>Age :</label>
+                    <input type="number" id="age" name="Age" placeholder="[1-120]" min="1" max="120" required>
+            <br>
+            <br>
+                <label>date of reservation :</label>
+                <input type="date" id="datemin" name="date of reservation"  min="2000-01-02" title="after 2000-01-01" required>
+            <br>
+            <br>
+                <label>time for reservation :</label>
+                    <input type="time" name="time for reservation" title="available only from 8:00am to 12:00pm" required>
+            <br>
+            <br>
+                <label>price of reservation :</label>
+                    <input type="number"  id="price" name="price of reservation" placeholder="1000 max" step="100" min="0" max="1000" requires>
+            <br>
+            <br>
+                <label>gender :</label>
+            <br>
+                    <input type="radio" id="male" name="gender" value="male" checked required>
+                        <label>male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                        <label>female</label>
+            <br>
+            <br>
+                <label>choose department :</label>
+                    <select name="Department" title="قلب, باطنية ,عيون ,طوارئ" required>
+                        <option value="القلب" selected>القلب</option>
+                        <option value="الباطنيه">الباطنيه</option>
+                        <option value="الطوارىء" disabled>الطوارىء</option>
+                        <option value="العيون">العيون</option>
+                    </select>
+            <br>
+            <br>
+                <label>select city :</label>
+                    <input list="cities" name="citiy" id="city" placeholder="choose or search from list"  required>
+                        <datalist id="cities">
+                            <option value="صنعاء">
+                            <option value="عدن">
+                            <option value="اب">
+                            <option value="تعز">
+                            <option value="المكلا">
+                        </datalist>
+            <br>
+            <br>
+                <label>note :</label>
+                <br>
+                    <textarea id="note" name="note" cols="20" rows=15 placeholder="what are the symptoms that you have been going through" required></textarea>
+            <br>
+            <br>
+                <label>uploaded image :</label>
+                    <input type="file" name="image" accept=" .jpg" title="upload images of your previous tests" multiple required>
+            <br>
+            <br>
+            <input type="hidden" id="hidden" name="hidden Input" value="1999">
+            <input type="reset" value="Empty Form">
+            <input type="submit" value="Send Data">
+        </form>
+    </body>
+</html>
